@@ -26,7 +26,12 @@ $Dark-grayish-cyan: #7f9c9f;
         };
     };
     @if $breakpoint == m-screen {
-        @media only screen and (min-width: 800px) {
+        @media only screen and (min-width: 720px) {
+            @content
+        };
+    };
+    @if $breakpoint == ml-screen {
+        @media only screen and (min-width: 830px) {
             @content
         };
     };
@@ -82,15 +87,30 @@ main {
     border-top-left-radius: 26px;
     border-top-right-radius: 26px;
 
-    // @include respond(xl-screen){
-    //     display: flex;
-    //     justify-content: space-between;
-    //     padding: 32px 32px 32px 48px;
-    //     border-radius: 24px;
-    //     width: fit-content;
-    //     // height: 481px;
-    //     margin: 88px auto 238px auto;
-    // }
+    @include respond(m-screen){
+        display: flex;
+        padding: 16px;
+        border-radius: 0;
+    }
+
+    @include respond(l-screen){
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 32px 32px 48px;
+        border-radius: 24px;
+        width: fit-content;
+        // height: 481px;
+        margin: 50px auto 100px auto;
+    }
+    @include respond(xl-screen){
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 32px 32px 48px;
+        border-radius: 24px;
+        width: fit-content;
+        // height: 481px;
+        margin: 88px auto 238px auto;
+    }
 }
 header {
     background-color: $Light-grayish-cyan;
@@ -98,6 +118,10 @@ header {
     margin: 0 auto;
     padding: 50px 0 40px 0;
     
+    @include respond(l-screen){
+        padding: 70px 0 0 0;
+
+    }
     @include respond(xl-screen){
         padding: 168px 0 0 0;
 
@@ -120,7 +144,7 @@ header {
     [type="number"]{
         padding: 6px 16px 6px 32px;
         text-align: right;
-        width: 260px;
+        width: stretch;
         font-size: 24px;
         font-family: 'Space Mono', monospace;
         border-radius: 4px;
@@ -129,9 +153,6 @@ header {
         color: $Very-dark-cyan;
         border: 2px solid transparent;
 
-        // @include respond(xl-screen){
-        //     width: stretch;
-        // }
         
         &:hover,
         &:focus{
@@ -170,16 +191,45 @@ header {
         border-radius: 6px;
         color: $White;
         margin-bottom: 16px;
+        
+        @include respond(xs-screen){
+            width: 166px;
+        }
+        @include respond(s-screen){
+            width: 168px;
+        }
+        @include respond(m-screen){
+            width: 148px;
+        }
+        @include respond(ml-screen){
+            width: 162px;
+        }
 
-        // @include respond(xl-screen){
-        //     width: fit-content;
-        //     padding: 6px 36px;
+        @include respond(l-screen){
+            width: fit-content;
+            padding: 6px 36px;
+            
+            &:first-child{
+                width: 44px;
+            }
+            &:last-child {
+                width: 88px;
+                padding: 6px 14px;
+            }
+        }
+        @include respond(xl-screen){
+            width: fit-content;
+            padding: 6px 36px;
 
-        //     &:last-child {
-        //         width: 88px;
-        //         padding: 6px 14px;
-        //     }
-        // }
+            &:first-child{
+                width: 44px;
+            }
+
+            &:last-child {
+                width: 88px;
+                padding: 6px 14px;
+            }
+        }
 
         &:hover{
             color: $Very-dark-cyan;
@@ -243,25 +293,47 @@ header {
 
 .transparent-card {
 
-    // @include respond(xl-screen){
-    //     margin-right: 48px;
-    //     padding-top: 13px;
-    //     width: 376px;
-    //     height: fit-content;
-    // }
+    @include respond(m-screen){
+        padding-right: 16px;
+    }
+
+    @include respond(l-screen){
+        margin-right: 48px;
+        padding-top: 13px;
+        width: 376px;
+        height: fit-content;
+    }
+    @include respond(xl-screen){
+        margin-right: 48px;
+        padding-top: 13px;
+        width: 376px;
+        height: fit-content;
+    }
     
     .text-group {
         position: relative;
         margin-bottom: 32px;
         padding: 0 32px;
 
-        // @include respond(xl-screen){
-        //     padding: 0;
+        @include respond(m-screen){
+            padding: 0;
+            margin-bottom: 0;
+        }
 
-        //     &:last-child{
-        //         margin-bottom: 0;
-        //     }
-        // }
+        @include respond(l-screen){
+            padding: 0;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        @include respond(xl-screen){
+            padding: 0;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
 
         h5{
             margin-bottom: 6px;
@@ -271,9 +343,12 @@ header {
                 margin-bottom: 16px;
             }
 
-            // @include respond(xl-screen){
-            //     margin-bottom: 24px;
-            // }
+            @include respond(l-screen){
+                margin-bottom: 24px;
+            }
+            @include respond(xl-screen){
+                margin-bottom: 24px;
+            }
         }
     }
 
@@ -286,11 +361,18 @@ header {
     width: fit-content;
     margin: 0 auto;
 
-    // @include respond(xl-screen){
-    //     margin: 0;
-    //     padding: 40px;
-    //     height: fit-content;
-    // }
+    
+
+    @include respond(l-screen){
+        margin: 0;
+        padding: 40px;
+        height: fit-content;
+    }
+    @include respond(xl-screen){
+        margin: 0;
+        padding: 40px;
+        height: fit-content;
+    }
     
     .unit {
         display: flex;
@@ -303,16 +385,35 @@ header {
         
         &:first-child{
             margin-bottom: 24px;
+
+            @include respond(m-screen){
+                margin-bottom: 90px;
+            }
+            @include respond(ml-screen){
+                margin-bottom: 60px;
+            }
             
-            // @include respond(xl-screen){
-            //     margin-bottom: 52px;
-            // }
+            @include respond(l-screen){
+                margin-bottom: 52px;
+            }
+            @include respond(xl-screen){
+                margin-bottom: 52px;
+            }
         }
         &:nth-child(2){
             margin-bottom: 32px;
-            // @include respond(xl-screen){
-            //     margin-bottom: 121px;
-            // }
+            @include respond(m-screen){
+                margin-bottom: 90px;
+            }
+            @include respond(ml-screen){
+                margin-bottom: 90px;
+            }
+            @include respond(l-screen){
+                margin-bottom: 121px;
+            }
+            @include respond(xl-screen){
+                margin-bottom: 121px;
+            }
         }
     }
 }
@@ -332,6 +433,9 @@ header {
     font-size: 11px; 
     text-align: center;
     // margin-bottom: 10px; 
+    @include respond(l-screen){
+        background-color: transparent;
+    }
     a { 
         color: hsl(228, 45%, 44%); 
     }

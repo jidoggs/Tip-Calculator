@@ -48,6 +48,50 @@ main {
   border-top-right-radius: 26px;
 }
 
+@media only screen and (min-width: 720px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 16px;
+    border-radius: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 32px 32px 32px 48px;
+    border-radius: 24px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 50px auto 100px auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 32px 32px 32px 48px;
+    border-radius: 24px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 88px auto 238px auto;
+  }
+}
+
 header {
   background-color: #C5E4E7;
   width: -webkit-fit-content;
@@ -55,6 +99,12 @@ header {
   width: fit-content;
   margin: 0 auto;
   padding: 50px 0 40px 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    padding: 70px 0 0 0;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -79,7 +129,9 @@ header {
 .input-bill [type="number"] {
   padding: 6px 16px 6px 32px;
   text-align: right;
-  width: 260px;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
   font-size: 24px;
   font-family: 'Space Mono', monospace;
   border-radius: 4px;
@@ -128,6 +180,62 @@ header {
   border-radius: 6px;
   color: #ffffff;
   margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 414px) {
+  .btn-small {
+    width: 166px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .btn-small {
+    width: 168px;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .btn-small {
+    width: 148px;
+  }
+}
+
+@media only screen and (min-width: 830px) {
+  .btn-small {
+    width: 162px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .btn-small {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 6px 36px;
+  }
+  .btn-small:first-child {
+    width: 44px;
+  }
+  .btn-small:last-child {
+    width: 88px;
+    padding: 6px 14px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .btn-small {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 6px 36px;
+  }
+  .btn-small:first-child {
+    width: 44px;
+  }
+  .btn-small:last-child {
+    width: 88px;
+    padding: 6px 14px;
+  }
 }
 
 .btn-small:hover {
@@ -187,10 +295,63 @@ header {
           justify-content: space-between;
 }
 
+@media only screen and (min-width: 720px) {
+  .transparent-card {
+    padding-right: 16px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .transparent-card {
+    margin-right: 48px;
+    padding-top: 13px;
+    width: 376px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .transparent-card {
+    margin-right: 48px;
+    padding-top: 13px;
+    width: 376px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
 .transparent-card .text-group {
   position: relative;
   margin-bottom: 32px;
   padding: 0 32px;
+}
+
+@media only screen and (min-width: 720px) {
+  .transparent-card .text-group {
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .transparent-card .text-group {
+    padding: 0;
+  }
+  .transparent-card .text-group:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .transparent-card .text-group {
+    padding: 0;
+  }
+  .transparent-card .text-group:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .transparent-card .text-group h5 {
@@ -201,6 +362,18 @@ header {
   margin-bottom: 16px;
 }
 
+@media only screen and (min-width: 1024px) {
+  .transparent-card .text-group:nth-child(2) {
+    margin-bottom: 24px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .transparent-card .text-group:nth-child(2) {
+    margin-bottom: 24px;
+  }
+}
+
 .colored-card {
   background-color: #00494d;
   padding: 40px 22px 24px 24px;
@@ -209,6 +382,26 @@ header {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .colored-card {
+    margin: 0;
+    padding: 40px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .colored-card {
+    margin: 0;
+    padding: 40px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 
 .colored-card .unit {
@@ -231,8 +424,56 @@ header {
   margin-bottom: 24px;
 }
 
+@media only screen and (min-width: 720px) {
+  .colored-card .unit:first-child {
+    margin-bottom: 90px;
+  }
+}
+
+@media only screen and (min-width: 830px) {
+  .colored-card .unit:first-child {
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .colored-card .unit:first-child {
+    margin-bottom: 52px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .colored-card .unit:first-child {
+    margin-bottom: 52px;
+  }
+}
+
 .colored-card .unit:nth-child(2) {
   margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 720px) {
+  .colored-card .unit:nth-child(2) {
+    margin-bottom: 90px;
+  }
+}
+
+@media only screen and (min-width: 830px) {
+  .colored-card .unit:nth-child(2) {
+    margin-bottom: 90px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .colored-card .unit:nth-child(2) {
+    margin-bottom: 121px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .colored-card .unit:nth-child(2) {
+    margin-bottom: 121px;
+  }
 }
 
 .people-check {
@@ -248,6 +489,12 @@ header {
   background-color: #ffffff;
   font-size: 11px;
   text-align: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  .attribution {
+    background-color: transparent;
+  }
 }
 
 .attribution a {
