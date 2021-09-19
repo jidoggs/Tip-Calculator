@@ -48,23 +48,6 @@ main {
   border-top-right-radius: 26px;
 }
 
-@media only screen and (min-width: 1440px) {
-  main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 32px 32px 32px 48px;
-    border-radius: 24px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 88px auto 238px auto;
-  }
-}
-
 header {
   background-color: #C5E4E7;
   width: -webkit-fit-content;
@@ -106,14 +89,6 @@ header {
   border: 2px solid transparent;
 }
 
-@media only screen and (min-width: 1440px) {
-  .input-bill [type="number"] {
-    width: -webkit-fill-available;
-    width: -moz-available;
-    width: stretch;
-  }
-}
-
 .input-bill [type="number"]:hover, .input-bill [type="number"]:focus {
   outline: none;
   border: 2px solid #26c0ab;
@@ -153,19 +128,6 @@ header {
   border-radius: 6px;
   color: #ffffff;
   margin-bottom: 16px;
-}
-
-@media only screen and (min-width: 1440px) {
-  .btn-small {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 6px 36px;
-  }
-  .btn-small:last-child {
-    width: 88px;
-    padding: 6px 14px;
-  }
 }
 
 .btn-small:hover {
@@ -225,30 +187,10 @@ header {
           justify-content: space-between;
 }
 
-@media only screen and (min-width: 1440px) {
-  .transparent-card {
-    margin-right: 48px;
-    padding-top: 13px;
-    width: 376px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-
 .transparent-card .text-group {
   position: relative;
   margin-bottom: 32px;
   padding: 0 32px;
-}
-
-@media only screen and (min-width: 1440px) {
-  .transparent-card .text-group {
-    padding: 0;
-  }
-  .transparent-card .text-group:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .transparent-card .text-group h5 {
@@ -259,12 +201,6 @@ header {
   margin-bottom: 16px;
 }
 
-@media only screen and (min-width: 1440px) {
-  .transparent-card .text-group:nth-child(2) {
-    margin-bottom: 24px;
-  }
-}
-
 .colored-card {
   background-color: #00494d;
   padding: 40px 22px 24px 24px;
@@ -273,16 +209,6 @@ header {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
-}
-
-@media only screen and (min-width: 1440px) {
-  .colored-card {
-    margin: 0;
-    padding: 40px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
 }
 
 .colored-card .unit {
@@ -305,20 +231,8 @@ header {
   margin-bottom: 24px;
 }
 
-@media only screen and (min-width: 1440px) {
-  .colored-card .unit:first-child {
-    margin-bottom: 52px;
-  }
-}
-
 .colored-card .unit:nth-child(2) {
   margin-bottom: 32px;
-}
-
-@media only screen and (min-width: 1440px) {
-  .colored-card .unit:nth-child(2) {
-    margin-bottom: 121px;
-  }
 }
 
 .people-check {

@@ -15,22 +15,27 @@ $Darker-grayish-cyan: #5e7a7d;
 $Dark-grayish-cyan: #7f9c9f;
 
 @mixin respond($breakpoint) {
-    @if $breakpoint == mobile {
-        @media only screen and (min-width: 376px) {
+    @if $breakpoint == xs-screen {
+        @media only screen and (min-width: 414px) {
             @content
         };
     };
-    @if $breakpoint == tablets {
-        @media only screen and (min-width: 625px) {
+    @if $breakpoint == s-screen {
+        @media only screen and (min-width: 600px) {
             @content
         };
     };
-    @if $breakpoint == reg-Screen {
-        @media only screen and (min-width: 1200px) {
+    @if $breakpoint == m-screen {
+        @media only screen and (min-width: 800px) {
             @content
         };
     };
-    @if $breakpoint == lag-Screen {
+    @if $breakpoint == l-screen {
+        @media only screen and (min-width: 1024px) {
+            @content
+        };
+    };
+    @if $breakpoint == xl-screen {
         @media only screen and (min-width: 1440px) {
             @content
         };
@@ -77,15 +82,15 @@ main {
     border-top-left-radius: 26px;
     border-top-right-radius: 26px;
 
-    @include respond(lag-Screen){
-        display: flex;
-        justify-content: space-between;
-        padding: 32px 32px 32px 48px;
-        border-radius: 24px;
-        width: fit-content;
-        // height: 481px;
-        margin: 88px auto 238px auto;
-    }
+    // @include respond(xl-screen){
+    //     display: flex;
+    //     justify-content: space-between;
+    //     padding: 32px 32px 32px 48px;
+    //     border-radius: 24px;
+    //     width: fit-content;
+    //     // height: 481px;
+    //     margin: 88px auto 238px auto;
+    // }
 }
 header {
     background-color: $Light-grayish-cyan;
@@ -93,7 +98,7 @@ header {
     margin: 0 auto;
     padding: 50px 0 40px 0;
     
-    @include respond(lag-Screen){
+    @include respond(xl-screen){
         padding: 168px 0 0 0;
 
     }
@@ -124,9 +129,9 @@ header {
         color: $Very-dark-cyan;
         border: 2px solid transparent;
 
-        @include respond(lag-Screen){
-            width: stretch;
-        }
+        // @include respond(xl-screen){
+        //     width: stretch;
+        // }
         
         &:hover,
         &:focus{
@@ -166,15 +171,15 @@ header {
         color: $White;
         margin-bottom: 16px;
 
-        @include respond(lag-Screen){
-            width: fit-content;
-            padding: 6px 36px;
+        // @include respond(xl-screen){
+        //     width: fit-content;
+        //     padding: 6px 36px;
 
-            &:last-child {
-                width: 88px;
-                padding: 6px 14px;
-            }
-        }
+        //     &:last-child {
+        //         width: 88px;
+        //         padding: 6px 14px;
+        //     }
+        // }
 
         &:hover{
             color: $Very-dark-cyan;
@@ -231,32 +236,32 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include respond(lag-Screen){
-        // flex-wrap: nowrap;
-    }
+    // @include respond(xl-screen){
+    //     // flex-wrap: nowrap;
+    // }
 }
 
 .transparent-card {
 
-    @include respond(lag-Screen){
-        margin-right: 48px;
-        padding-top: 13px;
-        width: 376px;
-        height: fit-content;
-    }
+    // @include respond(xl-screen){
+    //     margin-right: 48px;
+    //     padding-top: 13px;
+    //     width: 376px;
+    //     height: fit-content;
+    // }
     
     .text-group {
         position: relative;
         margin-bottom: 32px;
         padding: 0 32px;
 
-        @include respond(lag-Screen){
-            padding: 0;
+        // @include respond(xl-screen){
+        //     padding: 0;
 
-            &:last-child{
-                margin-bottom: 0;
-            }
-        }
+        //     &:last-child{
+        //         margin-bottom: 0;
+        //     }
+        // }
 
         h5{
             margin-bottom: 6px;
@@ -266,9 +271,9 @@ header {
                 margin-bottom: 16px;
             }
 
-            @include respond(lag-Screen){
-                margin-bottom: 24px;
-            }
+            // @include respond(xl-screen){
+            //     margin-bottom: 24px;
+            // }
         }
     }
 
@@ -281,11 +286,11 @@ header {
     width: fit-content;
     margin: 0 auto;
 
-    @include respond(lag-Screen){
-        margin: 0;
-        padding: 40px;
-        height: fit-content;
-    }
+    // @include respond(xl-screen){
+    //     margin: 0;
+    //     padding: 40px;
+    //     height: fit-content;
+    // }
     
     .unit {
         display: flex;
@@ -299,15 +304,15 @@ header {
         &:first-child{
             margin-bottom: 24px;
             
-            @include respond(lag-Screen){
-                margin-bottom: 52px;
-            }
+            // @include respond(xl-screen){
+            //     margin-bottom: 52px;
+            // }
         }
         &:nth-child(2){
             margin-bottom: 32px;
-            @include respond(lag-Screen){
-                margin-bottom: 121px;
-            }
+            // @include respond(xl-screen){
+            //     margin-bottom: 121px;
+            // }
         }
     }
 }
@@ -327,5 +332,7 @@ header {
     font-size: 11px; 
     text-align: center;
     // margin-bottom: 10px; 
-    a { color: hsl(228, 45%, 44%); }
+    a { 
+        color: hsl(228, 45%, 44%); 
+    }
 }
