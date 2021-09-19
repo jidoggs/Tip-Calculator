@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script src="src/app.js"></script>
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+  <header>
+    <h1>
+      <a href="#" title="Splitter" class="logo"></a>
+    </h1>
+  </header>
+  <main class="main-container">
+    <div class="transparent-card" role="form">
+      <div class="text-group" role="group">
+        <h5>
+          Bill
+        </h5>
+        <div class="input-bill count-bill" role="group">
+          <span class="icon-input icon-dollar" role="img"></span>
+          <input type="number" name="bill" id="bill" placeholder="0" class="input-amount">
+        </div>
+      </div>
+      <div class="text-group" role="group">
+        <h5>
+          Select Tip %
+        </h5>
+        <div class="tip-buttons" role="group" >
+          <div id="btn-5" class="btn btn-small" value="5" onclick="calculateTip(5)" tabindex="1" role="button">
+            <h3>
+              5%
+            </h3>
+          </div>
+          <div id="btn-10" class="btn btn-small" value="10" onclick="calculateTip(10)" tabindex="2" role="button">
+            <h3>
+              10%
+            </h3>
+          </div>
+          <div id="btn-15" class="btn btn-small" value="15" onclick="calculateTip(15)" tabindex="3" role="button">
+            <h3>
+              15%
+            </h3>
+          </div>
+          <div id="btn-25" class="btn btn-small" value="25" onclick="calculateTip(25)" tabindex="4" role="button">
+            <h3>
+              25%
+            </h3>
+          </div>
+          <div id="btn-50" class="btn btn-small" value="50" onclick="calculateTip(50)" tabindex="5" role="button">
+            <h3>
+              50%
+            </h3>
+          </div>
+          <!-- <div id="btn-custom" class="btn btn-small-custom btn-small"> -->
+          <input type="number" name="custom Tip" placeholder="Custom" id="custom-Tip" class="btn btn-small-custom btn-small" onkeyup="pressEnter()" onblur="clickOutside()" >
+          <!-- </div> -->
+        </div>
+      </div>
+      <div class="text-group" role="group" >
+        <h5>
+          Number of People
+        </h5>
+        <span id="people-check" class="people-check" aria-errormessage="Can't be Zero">Can't be Zero </span>
+        <div class="input-bill count-people" role="group">
+          <span class="icon-input icon-person" role="img"></span>
+          <input type="number" name="people" id="people" placeholder="0" class="input-amount">
+        </div>
+      </div>
+    </div>
+    <div class="colored-card" role="group">
+      <div class="colored-card-container" role="group">
+        <div class="unit" role="group">
+          <div class="unit-text" role="group">
+            <h5>
+              Tip Amount
+            </h5>
+            <h6>
+              / person
+            </h6>
+          </div>
+          <h2 id="per-person-tip" class="tip-amount">$0.00</h2>
+        </div>
+        <div class="unit" role="group">
+          <div class="unit-text" role="group">
+            <h5>
+              Total
+            </h5>
+            <h6>
+              / person
+            </h6>
+          </div>
+          <h2 id="per-person-total" class="unit-amount">$0.00</h2>
+        </div>
+        <div class="btn btn-big" id="reset-unit" onclick="resetResult()" role="button">
+          <h4>
+            Reset
+          </h4>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+  
+  <div class="attribution" role="contentinfo">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/jidoggs">Tomiwa</a>.
+  </div>
+</body>
+</html>

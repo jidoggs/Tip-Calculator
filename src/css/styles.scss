@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+// color
+$Light-grayish-cyan : #C5E4E7;
+$Lighter-grayish-cyan: #f4fafa;
+$White : #ffffff;
+$Strong-cyan: #26c0ab;
+$Very-dark-cyan: #00494d;
+$Darker-grayish-cyan: #5e7a7d;
+$Dark-grayish-cyan: #7f9c9f;
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == mobile {
+        @media only screen and (min-width: 376px) {
+            @content
+        };
+    };
+    @if $breakpoint == tablets {
+        @media only screen and (min-width: 625px) {
+            @content
+        };
+    };
+    @if $breakpoint == reg-Screen {
+        @media only screen and (min-width: 1200px) {
+            @content
+        };
+    };
+    @if $breakpoint == lag-Screen {
+        @media only screen and (min-width: 1440px) {
+            @content
+        };
+    };
+}
+
+h2{
+    font-size: 32px;
+    line-height: 48px 101%;
+    letter-spacing: -2%;
+    color: $Strong-cyan;
+}
+h3 {
+    font-size: 24px;
+    line-height: 36px;
+}
+h4{
+    font-size: 20px;
+    line-height: 30px;
+    color: $Very-dark-cyan;
+}
+h5{
+    font-size: 16px;
+    line-height: 24px;
+    color: $Darker-grayish-cyan;
+}
+h6{
+    font-size: 13px;
+    line-height: 19px;
+    color: $Dark-grayish-cyan;
+}
+
+
+body{
+    box-sizing: border-box;
+    // box-sizing: content-box;
+    background-color: $Light-grayish-cyan;
+    font-family: 'Space Mono', monospace;
+}
+
+main {
+    background-color: $White;
+    padding: 32px 0;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+
+    @include respond(lag-Screen){
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 32px 32px 48px;
+        border-radius: 24px;
+        width: fit-content;
+        // height: 481px;
+        margin: 88px auto 238px auto;
+    }
+}
+header {
+    background-color: $Light-grayish-cyan;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 50px 0 40px 0;
+    
+    @include respond(lag-Screen){
+        padding: 168px 0 0 0;
+
+    }
+
+    
+}
+
+.logo{
+    background-image: url(/src/images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 54px;
+    width: 87px;
+}
+
+.input-bill{
+    position: relative;
+    [type="number"]{
+        padding: 6px 16px 6px 32px;
+        text-align: right;
+        width: 260px;
+        font-size: 24px;
+        font-family: 'Space Mono', monospace;
+        border-radius: 4px;
+        border: 1px transparent solid;
+        background-color: $Lighter-grayish-cyan;
+        color: $Very-dark-cyan;
+        border: 2px solid transparent;
+
+        @include respond(lag-Screen){
+            width: stretch;
+        }
+        
+        &:hover,
+        &:focus{
+            outline:  none;
+            border: 2px solid $Strong-cyan;
+            border-radius: 4px;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .icon-input{
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        width: 12px;
+        height: 16px;
+    }
+    .icon-person {
+        background-image: url(/src/images/icon-person.svg);
+    }
+    .icon-dollar {
+        background-image: url(/src/images/icon-dollar.svg);
+    }
+}
+
+.btn{
+    cursor: pointer;
+
+    &-small {
+        background-color: $Very-dark-cyan;
+        width: 148px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        text-align: center;
+        border-radius: 6px;
+        color: $White;
+        margin-bottom: 16px;
+
+        @include respond(lag-Screen){
+            width: fit-content;
+            padding: 6px 36px;
+
+            &:last-child {
+                width: 88px;
+                padding: 6px 14px;
+            }
+        }
+
+        &:hover{
+            color: $Very-dark-cyan;
+            background-color: $Light-grayish-cyan;
+        }
+        &:focus{
+            color: $Very-dark-cyan;
+            background-color: $Strong-cyan;
+        }
+    
+    
+        &-custom{
+            background-color: $Lighter-grayish-cyan;
+            color: $Very-dark-cyan;
+            border: none;
+            font-size: 24px;
+            font-family: 'Space Mono', monospace;
+            border: 2px solid transparent;
+            cursor: default;
+
+            &:hover,
+            &:focus{
+                background-color: $Lighter-grayish-cyan;
+                outline:  none;
+                border: 2px solid $Strong-cyan;
+                border-radius: 4px;
+            }
+            &:focus{
+                text-align: right;
+            }
+        }
+    }
+    &-big {
+        background-color: $Darker-grayish-cyan;
+        padding: 10px 0;
+        width: 280px;
+        border-radius: 4px;
+        text-align: center;
+        margin: 0 auto;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $Very-dark-cyan;
+            background-color: $Light-grayish-cyan;
+        }
+        
+    }
+    
+}
+
+
+.tip-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include respond(lag-Screen){
+        // flex-wrap: nowrap;
+    }
+}
+
+.transparent-card {
+
+    @include respond(lag-Screen){
+        margin-right: 48px;
+        padding-top: 13px;
+        width: 376px;
+        height: fit-content;
+    }
+    
+    .text-group {
+        position: relative;
+        margin-bottom: 32px;
+        padding: 0 32px;
+
+        @include respond(lag-Screen){
+            padding: 0;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        h5{
+            margin-bottom: 6px;
+        }
+        &:nth-child(2){
+            h5{
+                margin-bottom: 16px;
+            }
+
+            @include respond(lag-Screen){
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+}
+
+.colored-card {
+    background-color: $Very-dark-cyan;
+    padding: 40px 22px 24px 24px;
+    border-radius: 16px;
+    width: fit-content;
+    margin: 0 auto;
+
+    @include respond(lag-Screen){
+        margin: 0;
+        padding: 40px;
+        height: fit-content;
+    }
+    
+    .unit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h5{
+            color: $White;
+        }
+        
+        &:first-child{
+            margin-bottom: 24px;
+            
+            @include respond(lag-Screen){
+                margin-bottom: 52px;
+            }
+        }
+        &:nth-child(2){
+            margin-bottom: 32px;
+            @include respond(lag-Screen){
+                margin-bottom: 121px;
+            }
+        }
+    }
+}
+
+.people-check{
+    display: none;
+    position: absolute;
+    top: 6px;
+    right: 32px;
+    font-size: 12px;
+    color: red;
+}
+
+
+.attribution { 
+    background-color: $White;
+    font-size: 11px; 
+    text-align: center;
+    // margin-bottom: 10px; 
+    a { color: hsl(228, 45%, 44%); }
+}
