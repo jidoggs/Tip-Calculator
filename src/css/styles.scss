@@ -425,6 +425,10 @@ header {
     right: 32px;
     font-size: 12px;
     color: red;
+
+    @include respond(m-screen){
+        right: 0;
+    }
 }
 
 
